@@ -12,6 +12,7 @@ echo
 echo "Checking if repo was downloaded locally"
 if ! [ -d ".git" ]; then
   echo "Repo not downloaded, fetching latest"
+  rm -rf /tmp/system-setup
   mkdir -p /tmp/system-setup
   curl -L -O https://github.com/tariqajyusuf/system-setup/archive/refs/heads/main.zip
   unzip main.zip -d /tmp/system-setup
