@@ -1,8 +1,20 @@
-11c11
-< ZSH_THEME="robbyrussell"
----
-> ZSH_THEME="agnoster"
-28c28
-< # zstyle ':omz:update' mode auto      # update automatically without asking
----
-> zstyle ':omz:update' mode auto      # update automatically without asking
+--- ~/.zshrc	2023-10-24 15:47:55
++++ ~/.zshrc	2023-10-16 08:47:21
+@@ -8,7 +8,7 @@
+ # load a random theme each time oh-my-zsh is loaded, in which case,
+ # to know which specific one was loaded, run: echo $RANDOM_THEME
+ # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+-ZSH_THEME="robbyrussell"
++ZSH_THEME="agnoster"
+ 
+ # Set list of themes to pick from when loading at random
+ # Setting this variable when ZSH_THEME=random will cause zsh to load
+@@ -25,7 +25,7 @@
+ 
+ # Uncomment one of the following lines to change the auto-update behavior
+ # zstyle ':omz:update' mode disabled  # disable automatic updates
+-# zstyle ':omz:update' mode auto      # update automatically without asking
++zstyle ':omz:update' mode auto      # update automatically without asking
+ # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+ 
+ # Uncomment the following line to change how often to auto-update (in days).
