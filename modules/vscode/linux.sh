@@ -2,7 +2,7 @@
 # Visual Studio Code (https://code.visualstudio.com)
 
 echo "[VSCode] Detecting linux version"
-if [ which apt ] ; then
+if which apt; then
   echo "[VSCode] Downloading VSCode for linux-deb-x64"
   curl -L -O https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 >> vscode.deb &> $OUTPUT
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
