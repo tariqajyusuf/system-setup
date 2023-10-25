@@ -1,3 +1,19 @@
 # System Setup
 
-Script for autoconfiguring a new machine
+Script for autoconfiguring a new machine. Automatically detects platform and architecture before performing setup and module installation.
+
+## How to use
+
+```bash
+curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.sh" | bash
+```
+
+## Options
+
+`-v` - Show all output from subcommands
+
+## Future Things
+
+- Create template for submoduling private settings like domain specific apps.
+- Add Windows support.
+- Allow configration of modules based on context.
