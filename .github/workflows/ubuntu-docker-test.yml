@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Test automated setup
-      run: docker build . --file tests/ubuntu/Dockerfile --tag system-setup-ubuntu:$(date +%s) && docker run -t system-setup-ubuntu:$(date +%s)
+    - name: Run setup script
+      run: docker build . --file tests/ubuntu/Dockerfile --tag system-setup-ubuntu:$(git rev-parse HEAD)
+    - name: Verify structure
+      run: docker run -t system-setup-ubuntu:$(git rev-parse HEAD)
