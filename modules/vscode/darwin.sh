@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Visual Studio Code (https://code.visualstudio.com)
 
 echo "[VSCode] Downloading VSCode for darwin-universal"
