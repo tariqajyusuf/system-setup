@@ -17,3 +17,4 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 - Create template for submoduling private settings like domain specific apps.
 - Add Windows support.
 - Allow configration of modules based on context.
+- Actually use sudo in script so you don't have to run the script as sudo to begin with.
