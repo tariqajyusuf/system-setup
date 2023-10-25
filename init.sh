@@ -1,15 +1,15 @@
 #!/bin/bash
 OUTPUT=/dev/null
-VERBOSE=`false`
+VERBOSE=false
 
 while getopts v flag
 do
   case "${flag}" in
-    v) VERBOSE=`true`;;
+    v) VERBOSE=true;;
   esac
 done
 
-if $VERBOSE; then; OUTPUT=/dev/fd/1; fi
+if $VERBOSE ; then OUTPUT=/dev/fd/1; fi
 
 echo "tariqajyusuf/system-setup ALPHA build"
 echo
