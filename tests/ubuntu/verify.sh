@@ -2,7 +2,7 @@ RESULT=0
 echo "Verifying Ubuntu image installed successfully..."
 
 echo "Test 1: oh-my-zsh initialization script exists..."
-if bash 'test -f $ZSH/oh-my-zsh.sh'; then
+if [ -f $ZSH/oh-my-zsh.sh ] ; then
   echo "Test 1: Passed"
   RESULT=1
 else
