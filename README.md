@@ -18,3 +18,8 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 - Add Windows support.
 - Allow configration of modules based on context.
 - Actually use sudo in script so you don't have to run the script as sudo to begin with.
+- Mac is relatively unstable and not being regularly tested.
+
+## Tests
+
+- Ubuntu configruation runs on each push.
