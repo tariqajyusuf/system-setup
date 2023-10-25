@@ -19,6 +19,9 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 - Allow configration of modules based on context.
 - Actually use sudo in script so you don't have to run the script as sudo to begin with.
 - Mac is relatively unstable and not being regularly tested, make sure to download and run with `-v`
+- Powerline fonts for mac
+- Fix patching on mac
+- Unmount docker image on mac
 
 ## Tests
 
