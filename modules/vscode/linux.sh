@@ -14,3 +14,5 @@ else
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
   mv code /usr/bin
 fi
+
+echo "[VSCode] Installed! Log into Settings Sync to pull your settings."
