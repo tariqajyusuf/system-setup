@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 RESULT=true
 echo "Verifying Ubuntu image installed successfully..."
