@@ -6,14 +6,19 @@
  # export MANPATH="/usr/local/man:$MANPATH"
 +export JAVA_HOME=/Users/c-tariqy/.sdkman/candidates/java/current
  
- # You may need to manually set your language environment
- # export LANG=en_US.UTF-8
-@@ -99,7 +100,9 @@
+ # Uncomment one of the following lines to change the auto-update behavior
+ # zstyle ':omz:update' mode disabled  # disable automatic updates
+-# zstyle ':omz:update' mode auto      # update automatically without asking
++zstyle ':omz:update' mode auto      # update automatically without asking
+ # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+ 
+ # Uncomment the following line to change how often to auto-update (in days).
+@@ -99,7 +100,8 @@
  # Example aliases
  # alias zshconfig="mate ~/.zshrc"
  # alias ohmyzsh="mate ~/.oh-my-zsh"
--
 +alias fugradle='rm -rf ~/.gradle/caches/* && mkdir ~/.gradle/caches/journal-1'
+
  #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
  export SDKMAN_DIR="$HOME/.sdkman"
  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
