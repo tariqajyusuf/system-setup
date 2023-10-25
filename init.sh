@@ -39,12 +39,12 @@ echo "Setting up for $UNAME..."
 echo "Running setup scripts..."
 for setup in `ls setup/*/$UNAME.sh`; do
   echo "Installing $setup..."
-  sh -c $setup
+  sh -c "OUTPUT=$OUTPUT $setup"
 done
 
 echo "Running module scripts..."
 for module in `ls modules/*/$UNAME.sh`; do
-  echo "Installing $module..."
+  echo "OUTPUT=$OUTPUT Installing $module..."
   sh -c $module
 done
 
