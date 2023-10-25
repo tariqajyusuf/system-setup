@@ -1,30 +1,31 @@
-#!/bin/bash
+#!/bin/zsh
+source ~/.zshrc
 
 RESULT=true
 echo "Verifying Ubuntu image installed successfully..."
 
 echo "Test 1: oh-my-zsh initialization script exists..."
-if [ -f ~/.oh-my-zsh ] ; then
+if omz version; then
   echo "Test 1: Passed"
-  RESULT=false
 else
   echo "Test 1: Failed"
+  RESULT=false
 fi
 
 echo "Test 2: SDKMAN! installed correctly..."
-if [ -f ~/.sdkman ] ; then
+if [ -d ~/.sdkman ] ; then
   echo "Test 2: Passed"
-  RESULT=false
 else
   echo "Test 2: Failed"
+  RESULT=false
 fi
 
 echo "Test 3: VSCode installed correctly..."
 if code --version --no-sandbox --user-data-dir /tmp; then
   echo "Test 3: Passed"
-  RESULT=false
 else
   echo "Test 3: Failed"
+  RESULT=false
 fi
 
 echo
