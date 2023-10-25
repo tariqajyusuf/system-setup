@@ -1,6 +1,4 @@
 #!/bin/bash
-cd "$(dirname "$0")"
-pwd
 
 echo "tariqajyusuf/system-setup ALPHA build"
 echo
@@ -22,8 +20,6 @@ if ! [ -d ".git" ]; then
   fi
   unzip main.zip -d /tmp/system-setup
   cd /tmp/system-setup/system-setup-main
-  ./init.sh
-  exit 0
 fi
 
 export UNAME=`uname | tr '[:upper:]' '[:lower:]'`
