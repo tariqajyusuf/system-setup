@@ -1,3 +1,5 @@
+#!/bin/bash
+
 RESULT=0
 echo "Verifying Ubuntu image installed successfully..."
 
