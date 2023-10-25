@@ -2,6 +2,9 @@
 # Visual Studio Code (https://code.visualstudio.com)
 
 echo "[VSCode] Detecting linux version"
+rm -rf /tmp/system-setup/scratch/vscode
+mkdir -p /tmp/system-setup/scratch/vscode
+cd /tmp/system-setup/scratch/vscode
 if which apt; then
   echo "[VSCode] Downloading VSCode for linux-deb-x64"
   curl -L -O https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 > vscode.deb &> $OUTPUT
