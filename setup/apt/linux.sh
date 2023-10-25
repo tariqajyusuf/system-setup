@@ -1,7 +1,9 @@
 #!/bin/bash
 # Debian handler
 
-if which apt; then
-  apt update
-  apt install -y curl sed zip unzip git zsh
+echo "[linux] checking if this is debian"
+if which apt &> $OUTPUT; then
+  echo "[linux][apt] debian found, installing prerequisites."
+  apt update &> $OUTPUT
+  apt install -y curl sed zip unzip git zsh &> $OUTPUT
 fi

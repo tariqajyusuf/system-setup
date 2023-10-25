@@ -4,4 +4,4 @@
 # Expects unzip, zip, curl, sed, zsh
 
 echo "[SDKMAN!] Installing..."
-curl -s "https://get.sdkman.io" | bash 
+curl -s "https://get.sdkman.io" | bash  &> $OUTPUT
