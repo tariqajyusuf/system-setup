@@ -10,7 +10,7 @@ if ! [ -d ".git" ]; then
   rm -rf /tmp/system-setup
   mkdir -p /tmp/system-setup
   curl -L -O https://github.com/tariqajyusuf/system-setup/archive/refs/heads/main.zip
-  if which unzip; then
+  if ! which unzip; then
     if which apt; then
       apt install unzip
     else
