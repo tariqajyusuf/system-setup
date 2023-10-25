@@ -28,6 +28,14 @@ else
   RESULT=false
 fi
 
+echo "Test 4: Docker installed correctly..."
+if docker --version; then
+  echo "Test 3: Passed"
+else
+  echo "Test 3: Failed"
+  RESULT=false
+fi
+
 echo
 echo "-----------------------------"
 if $RESULT; then

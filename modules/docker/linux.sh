@@ -10,20 +10,20 @@ cd /tmp/system-setup/scratch/docker
 if which apt; then
   # Pulled from https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
   echo "[Docker][apt] Adding Docker apt keys"
-  sudo apt-get install ca-certificates curl gnupg &> $OUTPUT
-  sudo install -m 0755 -d /etc/apt/keyrings &> $OUTPUT
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg &> $OUTPUT
-  sudo chmod a+r /etc/apt/keyrings/docker.gpg &> $OUTPUT
+  apt install -y ca-certificates curl gnupg &> $OUTPUT
+  install -m 0755 -d /etc/apt/keyrings &> $OUTPUT
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg &> $OUTPUT
+  chmod a+r /etc/apt/keyrings/docker.gpg &> $OUTPUT
 
   echo "[Docker][apt] Adding repository to Apt sources"
   echo \
     "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
     "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  sudo apt-get update &> $OUTPUT
+    tee /etc/apt/sources.list.d/docker.list > /dev/null
+  apt-get update &> $OUTPUT
 
   echo "[Docker][apt] Installing Docker"
-  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin &> $OUTPUT
+  apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin &> $OUTPUT
 else
   echo "[Docker] Downloading Docker tarball"
   # TODO: Make this pull latest instead.
