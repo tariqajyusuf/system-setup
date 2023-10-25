@@ -14,7 +14,7 @@ if which apt; then
   echo "[VSCode] Downloading VSCode for linux-deb-$PLATFORM"
   curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-$PLATFORM" &> $OUTPUT
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
-  apt install ./vscode.deb &> $OUTPUT
+  apt install -f -y ./vscode.deb &> $OUTPUT
 else
   echo "[VSCode] Downloading VSCode for linux64cli"
   curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-$PLATFORM" &> $OUTPUT
