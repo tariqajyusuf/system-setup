@@ -37,5 +37,5 @@ done
 
 echo "Applying config preferences..."
 for patch in `ls config/*/*.patch`; do
-  sh -c patch $patch
+  sh -c "cd ~ && patch -i $patch"
 done

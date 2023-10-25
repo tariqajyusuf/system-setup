@@ -1,5 +1,5 @@
---- ~/.zshrc	2023-10-24 15:47:55
-+++ ~/.zshrc	2023-10-16 08:47:21
+--- .zshrc	2023-10-24 15:47:55
++++ .zshrc	2023-10-16 08:47:21
 @@ -8,7 +8,7 @@
  # load a random theme each time oh-my-zsh is loaded, in which case,
  # to know which specific one was loaded, run: echo $RANDOM_THEME
