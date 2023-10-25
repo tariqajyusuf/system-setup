@@ -44,8 +44,8 @@ done
 
 echo "Running module scripts..."
 for module in `ls modules/*/$UNAME.sh`; do
-  echo "OUTPUT=$OUTPUT Installing $module..."
-  sh -c $module
+  echo "Installing $module..."
+  sh -c "OUTPUT=$OUTPUT $module"
 done
 
 echo "Applying config preferences..."
