@@ -12,4 +12,4 @@ echo "[VSCode] Mounting image..."
 hdiutil attach docker.dmg &> $OUTPUT
 cd /Volumes/Docker
 echo "[VSCode] Installing Docker on your machine, you may get a sudo prompt"
-mv Docker.app/ /Applications &> $OUTPUT
+sudo mv Docker.app/ /Applications &> $OUTPUT

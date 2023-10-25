@@ -9,5 +9,5 @@ curl -L -o vscode.zip https://code.visualstudio.com/sha/download\?build\=stable\
 echo "[VSCode] Extracting files..."
 unzip vscode.zip &> $OUTPUT
 echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
-mv Visual\ Studio\ Code.app/ /Applications &> $OUTPUT
+sudo mv Visual\ Studio\ Code.app/ /Applications &> $OUTPUT
 echo "[VSCode] Installed! Log into Settings Sync to pull your settings."

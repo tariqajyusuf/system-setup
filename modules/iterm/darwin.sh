@@ -9,4 +9,4 @@ curl -L -o iterm.zip "https://iterm2.com/downloads/stable/latest" &> $OUTPUT
 echo "[iTerm] Extracting files..."
 unzip iterm.zip &> $OUTPUT
 echo "[iTerm] Installing iTerm on your machine, you may get a sudo prompt"
-mv iTerm.app/ /Applications &> $OUTPUT
+sudo mv iTerm.app/ /Applications &> $OUTPUT
