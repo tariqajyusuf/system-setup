@@ -3,8 +3,9 @@
 
 PLATFORM=`uname -m`
 
-# Special case for aarch64 which should be treated as just ARM
+# Edge cases for platform name
 if [ $PLATFORM == "aarch64" ]; then PLATFORM="arm64"; fi
+if [ $PLATFORM == "x86_64" ]; then PLATFORM="x64"; fi
 
 echo "[VSCode] Detecting linux version"
 rm -rf /tmp/system-setup/scratch/vscode
