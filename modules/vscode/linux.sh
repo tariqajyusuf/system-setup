@@ -10,7 +10,7 @@ else
   echo "[VSCode] Downloading VSCode for linux64cli"
   curl -L -O https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64 >> vscode.tar.gz
   echo "[VSCode] Extracting files..."
-  tar
+  tar -xzf vscode.tar.gz
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
   mv code /usr/bin
 fi
