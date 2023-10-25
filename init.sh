@@ -2,6 +2,8 @@
 OUTPUT=/dev/null
 VERBOSE=false
 
+cd "$(dirname "$0")"
+
 while getopts v flag
 do
   case "${flag}" in
