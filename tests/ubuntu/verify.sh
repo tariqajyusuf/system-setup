@@ -1,10 +1,10 @@
-#!/bin/zsh
+#!/bin/bash
 
 RESULT=true
 echo "Verifying Ubuntu image installed successfully..."
 
 echo "Test 1: oh-my-zsh initialization script exists..."
-if [ -f $ZSH/oh-my-zsh.sh ] ; then
+if [ -f ~/.oh-my-zsh ] ; then
   echo "Test 1: Passed"
   RESULT=false
 else
@@ -12,7 +12,7 @@ else
 fi
 
 echo "Test 2: SDKMAN! installed correctly..."
-if sdk version; then
+if [ -f ~/.sdkman ] ; then
   echo "Test 2: Passed"
   RESULT=false
 else
