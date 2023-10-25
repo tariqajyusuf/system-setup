@@ -9,7 +9,7 @@ do
   esac
 done
 
-if $VERBOSE: then; OUTPUT=/dev/fd/1; fi
+if $VERBOSE; then; OUTPUT=/dev/fd/1; fi
 
 echo "tariqajyusuf/system-setup ALPHA build"
 echo
