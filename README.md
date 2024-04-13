@@ -22,7 +22,9 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 - Powerline fonts for mac
 - Fix patching on mac
 - Unmount docker image on mac
+- Better error checking
 
 ## Tests
 
 - Ubuntu configruation runs on each push.
+- Linter runs to make sure you didn't miss anything.
