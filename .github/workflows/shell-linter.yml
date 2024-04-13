@@ -1,0 +1,16 @@
+name: Shell linter
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Shell Linter
+        uses: azohra/shell-linter@v0.6.0
