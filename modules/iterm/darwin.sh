@@ -1,5 +1,5 @@
 #!/bin/bash
-# Visual Studio Code (https://code.visualstudio.com)
+# iTerm (https://iterm2.com/)
 
 echo "[iTerm] Downloading iTerm..."
 rm -rf /tmp/system-setup/scratch/iterm
