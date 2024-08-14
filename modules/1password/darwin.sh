@@ -10,3 +10,5 @@ echo "[1Password] Extracting files..."
 unzip iterm.zip &> $OUTPUT
 echo "[1Password] Installing 1Password on your machine, you may get a sudo prompt"
 open -n ./*.app &> $OUTPUT
+echo "[1Password] Installing CLI..."
+brew install 1password-cli
