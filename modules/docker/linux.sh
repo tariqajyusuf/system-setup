@@ -3,6 +3,11 @@
 
 PLATFORM=`uname -m`
 
+echo "[Docker] Checking if installed"
+if which docker ; then
+  exit 0
+fi
+
 echo "[Docker] Detecting linux version"
 rm -rf /tmp/system-setup/scratch/docker
 mkdir -p /tmp/system-setup/scratch/docker

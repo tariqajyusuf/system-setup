@@ -1,6 +1,11 @@
 #!/bin/bash
 # Installs GitHub (https://cli.github.com)
 
+echo "[GitHub CLI] Checking if installed"
+if which gh ; then
+  exit 0
+fi
+
 echo "[GitHub CLI] Installing..."
 (type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
 && mkdir -p -m 755 /etc/apt/keyrings \

@@ -1,6 +1,11 @@
 #!/bin/bash
 # Visual Studio Code (https://code.visualstudio.com)
 
+echo "[VSCode] Checking if installed"
+if which code ; then
+  exit 0
+fi
+
 PLATFORM=`uname -m`
 
 # Edge cases for platform name

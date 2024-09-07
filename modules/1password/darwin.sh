@@ -1,6 +1,11 @@
 #!/bin/bash
 # Installs 1Password (https://1password.com)
 
+echo "[1Password] Checking if installed"
+if which op ; then
+  exit 0
+fi
+
 echo "[1Password] Installing..."
 rm -rf /tmp/system-setup/scratch/1password
 mkdir -p /tmp/system-setup/scratch/1password

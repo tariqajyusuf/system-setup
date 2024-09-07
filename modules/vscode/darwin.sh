@@ -1,6 +1,11 @@
 #!/bin/bash
 # Visual Studio Code (https://code.visualstudio.com)
 
+echo "[VSCode] Checking if installed"
+if which code ; then
+  exit 0
+fi
+
 echo "[VSCode] Downloading VSCode for darwin-universal"
 rm -rf /tmp/system-setup/scratch/vscode
 mkdir -p /tmp/system-setup/scratch/vscode
