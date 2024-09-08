@@ -15,7 +15,7 @@ cd /tmp/system-setup/scratch/docker
 if which apt; then
   # Pulled from https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
   echo "[Docker][apt] Adding Docker apt keys"
-  apt install -y ca-certificates curl gnupg &> $OUTPUT
+  $SUDO apt install -y ca-certificates curl gnupg &> $OUTPUT
   install -m 0755 -d /etc/apt/keyrings &> $OUTPUT
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg &> $OUTPUT
   chmod a+r /etc/apt/keyrings/docker.gpg &> $OUTPUT
@@ -28,7 +28,7 @@ if which apt; then
   apt-get update &> $OUTPUT
 
   echo "[Docker][apt] Installing Docker"
-  apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin &> $OUTPUT
+  $SUDO apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin &> $OUTPUT
 else
   echo "[Docker] Downloading Docker tarball"
   # TODO: Make this pull latest instead.

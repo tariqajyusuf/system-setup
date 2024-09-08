@@ -2,6 +2,10 @@
 OUTPUT=/dev/null
 VERBOSE=false
 
+if [ "`whoami`" != "root" ] ; then
+  SUDO=sudo
+fi
+
 cd "$(dirname "$0")"
 
 while getopts v flag
@@ -41,13 +45,13 @@ echo "Setting up for $UNAME..."
 echo "Running setup scripts..."
 for setup in `ls setup/*/$UNAME.sh`; do
   echo "Installing $setup..."
-  bash -c "OUTPUT=$OUTPUT $setup"
+  bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $setup"
 done
 
 echo "Running module scripts..."
 for module in `ls modules/*/$UNAME.sh`; do
   echo "Installing $module..."
-  bash -c "OUTPUT=$OUTPUT $module"
+  bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $module"
 done
 
 echo "Applying config preferences..."
