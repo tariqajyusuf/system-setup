@@ -2,10 +2,10 @@
 # Debian handler
 
 echo "[linux] checking if this is debian"
-if which apt > $OUTPUT; then
-  echo "[linux][apt] debian found, installing prerequisites."
-  $SUDO apt update > $OUTPUT
-  $SUDO apt install -y curl sed zip unzip git zsh > $OUTPUT
-  echo "[linux][apt] upgrading packages."
-  $SUDO apt upgrade -y > $OUTPUT
+if which apt-get > $OUTPUT; then
+  echo "[linux][apt-get] debian found, installing prerequisites."
+  $SUDO apt-get update > $OUTPUT
+  $SUDO apt-get install -y curl sed zip unzip git zsh > $OUTPUT
+  echo "[linux][apt-get] upgrading packages."
+  $SUDO apt-get upgrade -y > $OUTPUT
 fi

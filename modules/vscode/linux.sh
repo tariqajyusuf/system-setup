@@ -16,11 +16,11 @@ echo "[VSCode] Detecting linux version"
 rm -rf /tmp/system-setup/scratch/vscode
 mkdir -p /tmp/system-setup/scratch/vscode
 cd /tmp/system-setup/scratch/vscode
-if which apt; then
+if which apt-get; then
   echo "[VSCode] Downloading VSCode for linux-deb-$PLATFORM"
   curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-$PLATFORM" > $OUTPUT
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
-  $SUDO apt install -f -y ./vscode.deb > $OUTPUT
+  $SUDO apt-get install -f -y ./vscode.deb > $OUTPUT
 else
   echo "[VSCode] Downloading VSCode for linux64cli"
   curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-$PLATFORM" > $OUTPUT
