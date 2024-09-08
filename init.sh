@@ -27,13 +27,13 @@ if ! [ -d ".git" ]; then
   rm -rf /tmp/system-setup
   mkdir -p /tmp/system-setup
   curl -L -O https://github.com/tariqajyusuf/system-setup/archive/refs/heads/main.zip > $OUTPUT
-  if which unzip; then
+  if ! which unzip; then
     if which apt; then
-      apt install unzip > $OUTPUT
-    fi
-  else
+      $SUDO apt install -y unzip > $OUTPUT
+    else
       echo "unzip was not found, please install unzip"
       exit 1
+    fi
   fi
   unzip main.zip -d /tmp/system-setup > $OUTPUT
   cd /tmp/system-setup/system-setup-main
