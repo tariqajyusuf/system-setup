@@ -7,5 +7,5 @@ if which apt &> $OUTPUT; then
   apt update &> $OUTPUT
   apt install -y curl sed zip unzip git zsh &> $OUTPUT
   echo "[linux][apt] upgrading packages."
-  apt upgrade &> $OUTPUT
+  apt upgrade -y &> $OUTPUT
 fi
