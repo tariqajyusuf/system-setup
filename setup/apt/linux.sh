@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Debian handler
 
 echo "[linux] checking if this is debian"

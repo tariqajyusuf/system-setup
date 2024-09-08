@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Installs SDKMAN! (https://sdkman.io)
 #
 # Expects unzip, zip, curl, sed, zsh

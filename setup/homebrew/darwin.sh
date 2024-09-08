@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "[darwin] Installing homebrew..."
 sudo xcodebuild -license accept

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Docker Desktop (https://www.docker.com/products/docker-desktop/)
 
 PLATFORM=`uname -m`

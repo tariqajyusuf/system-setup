@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Installs SDKMAN! (https://sdkman.io)
 
 echo "[SDKMAN!] Checking if installed"

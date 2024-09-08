@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # iTerm (https://iterm2.com/)
 
 echo "[iTerm] Downloading iTerm..."

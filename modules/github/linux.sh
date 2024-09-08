@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Installs GitHub (https://cli.github.com)
 
 echo "[GitHub CLI] Checking if installed"

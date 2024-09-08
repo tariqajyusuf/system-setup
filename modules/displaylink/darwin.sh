@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # DisplayLink Drivers for Mac (https://www.synaptics.com/products/displaylink-graphics/)
 
 echo "[DisplayLink] Downloading installer..."

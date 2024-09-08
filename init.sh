@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 OUTPUT=/dev/null
 VERBOSE=false
 

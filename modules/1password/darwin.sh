@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Installs 1Password (https://1password.com)
 
 echo "[1Password] Checking if installed"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Raycast (https://raycast.com/)
 
 echo "[Raycast] Downloading Raycast..."

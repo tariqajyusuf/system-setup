@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Bazel (https://bazel.build)
 
 echo "[Docker] Checking if installed"

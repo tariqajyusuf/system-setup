@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Visual Studio Code (https://code.visualstudio.com)
 
 echo "[VSCode] Checking if installed"

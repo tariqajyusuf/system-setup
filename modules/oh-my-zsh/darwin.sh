@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Installs oh-my-zsh (https://ohmyz.sh)
 #
 # Expects setup/homebrew
