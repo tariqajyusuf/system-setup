@@ -16,16 +16,16 @@ if which apt-get; then
   # Pulled from https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
   echo "[Docker][apt-get] Adding Docker apt-get keys"
   $SUDO apt-get install -y ca-certificates curl gnupg > $OUTPUT
-  $SUDO install -m 0755 -d /etc/apt-get/keyrings > $OUTPUT
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $SUDO gpg --dearmor -o /etc/apt-get/keyrings/docker.gpg > $OUTPUT
-  $SUDO chmod a+r /etc/apt-get/keyrings/docker.gpg > $OUTPUT
+  $SUDO install -m 0755 -d /etc/apt/keyrings > $OUTPUT
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $SUDO gpg --dearmor -o /etc/apt/keyrings/docker.gpg > $OUTPUT
+  $SUDO chmod a+r /etc/apt/keyrings/docker.gpg > $OUTPUT
 
   echo "[Docker][apt-get] Adding repository to apt-get sources"
   echo \
-    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt-get/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
     "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-    tee /etc/apt-get/sources.list.d/docker.list > /dev/null
-  $SUDO apt-get-get update > $OUTPUT
+    tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $SUDO apt-get update > $OUTPUT
 
   echo "[Docker][apt-get] Installing Docker"
   $SUDO apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin > $OUTPUT
