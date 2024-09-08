@@ -14,4 +14,5 @@ curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | $SU
 $SUDO mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22 > $OUTPUT
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | $SUDO gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg > $OUTPUT
 echo "[1Password] Installing"
-$SUDO apt-get update && $SUDO apt-get install -y 1password 1password-cli > $OUTPUT
+$SUDO apt-get update > $OUTPUT
+$SUDO apt-get install -y 1password 1password-cli > $OUTPUT
