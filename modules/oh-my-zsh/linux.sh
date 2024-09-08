@@ -16,4 +16,4 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/instal
 chmod +x install.sh
 bash -c "./install.sh --unattended"
 echo "[oh-my-zsh] Changing shell to zsh..."
-$SUDO chsh -s "$zsh" "$USER"
+$SUDO chsh -s "/bin/zsh" "$USER"
