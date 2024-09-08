@@ -9,4 +9,8 @@ if [ -d $HOME/.oh-my-zsh ] ; then
 fi
 
 echo "[oh-my-zsh] Installing oh-my-zsh..."
-bash -c "CHSH=yes $(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > $OUTPUT
+rm -rf /tmp/system-setup/scratch/oh-my-zsh
+mkdir -p /tmp/system-setup/scratch/oh-my-zsh
+cd /tmp/system-setup/scratch/oh-my-zsh
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > install.sh
+bash -c "CHSH=yes ./install.sh --unattended"
