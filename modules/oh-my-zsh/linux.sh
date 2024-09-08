@@ -13,4 +13,5 @@ rm -rf /tmp/system-setup/scratch/oh-my-zsh
 mkdir -p /tmp/system-setup/scratch/oh-my-zsh
 cd /tmp/system-setup/scratch/oh-my-zsh
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > install.sh
+chmod +x install.sh
 bash -c "CHSH=yes ./install.sh --unattended"
