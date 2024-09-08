@@ -7,4 +7,4 @@ if which docker ; then
 fi
 
 echo "[Bazel] Installing Bazel"
-brew install bazelisk &> $OUTPUT
+brew install bazelisk > $OUTPUT

@@ -9,4 +9,4 @@ if which zsh ; then
 fi
 
 echo "[oh-my-zsh] Installing oh-my-zsh..."
-yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &> $OUTPUT
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > $OUTPUT

@@ -26,16 +26,16 @@ if ! [ -d ".git" ]; then
   echo "Repo not downloaded, fetching latest"
   rm -rf /tmp/system-setup
   mkdir -p /tmp/system-setup
-  curl -L -O https://github.com/tariqajyusuf/system-setup/archive/refs/heads/main.zip &> $OUTPUT
+  curl -L -O https://github.com/tariqajyusuf/system-setup/archive/refs/heads/main.zip > $OUTPUT
   if which unzip; then
     if which apt; then
-      apt install unzip &> $OUTPUT
+      apt install unzip > $OUTPUT
     fi
   else
       echo "unzip was not found, please install unzip"
       exit 1
   fi
-  unzip main.zip -d /tmp/system-setup &> $OUTPUT
+  unzip main.zip -d /tmp/system-setup > $OUTPUT
   cd /tmp/system-setup/system-setup-main
 fi
 
@@ -57,5 +57,5 @@ done
 echo "Applying config preferences..."
 for patch in `ls config/*/*.patch`; do
   echo "Patching $patch..."
-  bash -c "cd ~ && patch -i `pwd`/$patch" &> $OUTPUT
+  bash -c "cd ~ && patch -i `pwd`/$patch" > $OUTPUT
 done

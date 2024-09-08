@@ -9,6 +9,6 @@ if which zsh ; then
 fi
 
 echo "[oh-my-zsh] Installing zsh and git from homebrew..."
-brew install zsh git &> $OUTPUT
+brew install zsh git > $OUTPUT
 echo "[oh-my-zsh] Installing oh-my-zsh..."
-yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &> $OUTPUT
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > $OUTPUT

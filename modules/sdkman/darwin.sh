@@ -7,4 +7,4 @@ if which sdk ; then
 fi
 
 echo "[SDKMAN!] Installing..."
-curl -s "https://get.sdkman.io" | bash &> $OUTPUT
+curl -s "https://get.sdkman.io" | bash > $OUTPUT

@@ -7,4 +7,4 @@ if which gh ; then
 fi
 
 echo "[GitHub CLI] Installing..."
-brew install gh &> $OUTPUT
+brew install gh > $OUTPUT

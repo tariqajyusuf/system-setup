@@ -18,16 +18,16 @@ mkdir -p /tmp/system-setup/scratch/vscode
 cd /tmp/system-setup/scratch/vscode
 if which apt; then
   echo "[VSCode] Downloading VSCode for linux-deb-$PLATFORM"
-  curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-$PLATFORM" &> $OUTPUT
+  curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-$PLATFORM" > $OUTPUT
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
-  $SUDO apt install -f -y ./vscode.deb &> $OUTPUT
+  $SUDO apt install -f -y ./vscode.deb > $OUTPUT
 else
   echo "[VSCode] Downloading VSCode for linux64cli"
-  curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-$PLATFORM" &> $OUTPUT
+  curl -L -o vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-$PLATFORM" > $OUTPUT
   echo "[VSCode] Extracting files..."
-  tar -xzf vscode.tar.gz &> $OUTPUT
+  tar -xzf vscode.tar.gz > $OUTPUT
   echo "[VSCode] Installing VSCode on your machine, you may get a sudo prompt"
-  mv code /usr/bin &> $OUTPUT
+  mv code /usr/bin > $OUTPUT
 fi
 
 echo "[VSCode] Installed! Log into Settings Sync to pull your settings."

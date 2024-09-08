@@ -7,4 +7,4 @@ if which docker ; then
 fi
 
 echo "[Bazel] Installing Bazel"
-$SUDO apt install bazelisk &> $OUTPUT
+$SUDO apt install bazelisk > $OUTPUT
