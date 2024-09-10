@@ -44,18 +44,15 @@ echo "Setting up for $UNAME..."
 
 echo "Running setup scripts..."
 for setup in `ls setup/*/$UNAME.sh`; do
-  echo "Installing $setup..."
   bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $setup"
 done
 
 echo "Running module scripts..."
 for module in `ls modules/*/$UNAME.sh`; do
-  echo "Installing $module..."
   bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $module"
 done
 
 echo "Applying config preferences..."
 for patch in `ls config/*/*.patch`; do
-  echo "Patching $patch..."
   bash -c "cd ~ && patch -i `pwd`/$patch" > $OUTPUT
 done

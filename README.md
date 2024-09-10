@@ -4,8 +4,16 @@ Script for autoconfiguring a new machine. Automatically detects platform and arc
 
 ## How to use
 
+Linux/Mac
+
 ```bash
 curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.sh" | bash
+```
+
+Windows
+
+```ps
+Invoke-WebRequest https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.ps1 | &
 ```
 
 ## Options
