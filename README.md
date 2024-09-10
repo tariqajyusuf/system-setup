@@ -13,7 +13,7 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 Windows
 
 ```ps
-Invoke-WebRequest https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.ps1 | &
+. { (Invoke-WebRequest https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.ps1).Content } | Invoke-Expression
 ```
 
 ## Options
