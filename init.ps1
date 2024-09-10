@@ -21,11 +21,15 @@ if (-Not (Test-Path -Path ".git")) {
 
 # Make sure we're running on Windows by running a command that is only there.
 try {
-  Get-ComputerInfo -Property "OSName" 
+  $OS = Get-ComputerInfo -Property "OSName" 
+  if (-Not $OS -like "*Windows*") {
+    Write-Error "It looks like you're trying to run this on a non-Windows machine, use ./init.sh intead"
+    exit 1
+  }
 }
 catch {
   Write-Error "It looks like you're trying to run this on a non-Windows machine, use ./init.sh intead"
-  #exit 1
+  exit 1
 }
 
 Write-Host "Setting up for Windows..."
