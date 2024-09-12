@@ -4,7 +4,7 @@
 # Expects setup/homebrew
 
 echo "[oh-my-zsh] Checking if installed"
-if which zsh ; then
+if [ -d $HOME/.oh-my-zsh ] ; then
   exit 0
 fi
 
