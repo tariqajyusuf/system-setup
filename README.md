@@ -31,6 +31,10 @@ Windows
 - Fix patching on mac
 - Unmount docker image on mac
 - Better error checking
+- Add apps
+  - Morgen
+  - Obsidian
+  - Brave
 
 ## Tests
 
