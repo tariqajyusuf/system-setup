@@ -35,6 +35,7 @@ Windows
   - Morgen
   - Obsidian
   - Brave
+  - Signal
 
 ## Tests
 
