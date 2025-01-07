@@ -13,6 +13,7 @@ curl -S "https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.s
 Windows
 
 ```ps
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
 . { (Invoke-WebRequest https://raw.githubusercontent.com/tariqajyusuf/system-setup/main/init.ps1).Content } | Invoke-Expression
 ```
 
