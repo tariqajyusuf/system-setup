@@ -24,17 +24,12 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
 ## Future Things
 
 - Create template for submoduling private settings like domain specific apps.
-- Add Windows support.
 - Allow configration of modules based on context.
-- Actually use sudo in script so you don't have to run the script as sudo to begin with.
-- Mac is relatively unstable and not being regularly tested, make sure to download and run with `-v`
 - Powerline fonts for mac
 - Fix patching on mac
 - Unmount docker image on mac
 - Better error checking
 - Add apps
-  - Morgen
-  - Obsidian
   - Brave
   - Signal
 
