@@ -17,7 +17,7 @@ done
 
 if $VERBOSE ; then OUTPUT=/dev/fd/1; fi
 
-echo "tariqajyusuf/system-setup ALPHA build"
+echo "tariqajyusuf/system-setup"
 echo
 echo
 
@@ -44,12 +44,28 @@ echo "Setting up for $UNAME..."
 
 echo "Running setup scripts..."
 for setup in `ls setup/*/$UNAME.sh`; do
-  bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $setup"
+  bash -c "SUDO=$SUDO OUTPUT=$OUTPUT NONINTERACTIVE=1 $setup"
+  if [ $? -ne 0 ]; then
+    exit 1
+  fi
 done
 
+echo "Available Modules:"
+for module in `ls modules`; do
+  echo " - ${module##*/}"
+done
+
+echo
+echo "This script by default will install all modules, are there any modules you want to exclude? (comma-separated list, no spaces)"
+read EXCLUDE_MODULES
+
 echo "Running module scripts..."
-for module in `ls modules/*/$UNAME.sh`; do
-  bash -c "SUDO=$SUDO OUTPUT=$OUTPUT $module"
+for module in `ls modules`; do
+  if [[ ! ",$EXCLUDE_MODULES," =~ ",${module##*/}," ]]; then
+    bash -c "SUDO=$SUDO OUTPUT=$OUTPUT NONINTERACTIVE=1 modules/$module/$UNAME.sh"
+  else
+    echo "Skipping $module"
+  fi
 done
 
 echo "Applying config preferences..."

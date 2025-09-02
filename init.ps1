@@ -37,9 +37,25 @@ Write-Host "Running setup scripts..."
 $Scripts = Get-ChildItem -Path ./setup/*/windows.ps1
 foreach ($Script in $Scripts) {
   & $Script
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
 }
-Write-Host "Running module scripts..."
-$Scripts = Get-ChildItem -Path ./modules/*/windows.ps1 -File
+
+Write-Host "Available Modules:"
+$Scripts = Get-ChildItem -Path ./modules/* -File
 foreach ($Script in $Scripts) {
-  & $Script
+  Write-Host " - ${Script##*/}"
+}
+
+Write-Host
+Write-Host "This script by default will install all modules, are there any modules you want to exclude? (comma-separated list, no spaces)"
+$ExcludeModules = Read-Host
+
+Write-Host "Running module scripts..."
+$Scripts = Get-ChildItem -Path ./modules
+foreach ($Script in $Scripts) {
+  if ($ExcludeModules -notcontains ${Script##*/}) {
+    & $Script/windows.ps1
+  }
 }
