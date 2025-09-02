@@ -1,2 +1,2 @@
-Write-Host "[Powershell] Updating to latest via winget"
-winget install Microsoft.PowerShell
+Write-Host "[Hyper-V] Enabling feature..."
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
