@@ -27,11 +27,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
 - Allow configration of modules based on context.
 - Powerline fonts for mac
 - Fix patching on mac
-- Unmount docker image on mac
 - Better error checking
-- Add apps
-  - Brave
-  - Signal
 
 ## Tests
 

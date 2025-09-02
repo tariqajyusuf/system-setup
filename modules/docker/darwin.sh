@@ -8,5 +8,5 @@ if which docker ; then
   exit 0
 fi
 
-echo "[Docker] Installing Docker on your machine, you may get a sudo prompt"
+echo "[Docker] Installing..."
 brew install docker-desktop > $OUTPUT
