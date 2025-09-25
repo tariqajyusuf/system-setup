@@ -45,7 +45,7 @@ foreach ($Script in $Scripts) {
 Write-Host "Available Modules:"
 $Scripts = Get-ChildItem -Path ./modules/*
 foreach ($Script in $Scripts) {
-  Write-Host " - ${Script##*/}"
+  Write-Host " - ${Script}"
 }
 
 Write-Host
@@ -55,7 +55,7 @@ $ExcludeModules = Read-Host
 Write-Host "Running module scripts..."
 $Scripts = Get-ChildItem -Path ./modules/*/windows.ps1 -File
 foreach ($Script in $Scripts) {
-  if ($ExcludeModules -notcontains ${Script##*/}) {
-    & $Script/windows.ps1
+  if ($ExcludeModules -notcontains ${Script}) {
+    & $Script
   }
 }
