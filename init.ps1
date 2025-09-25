@@ -43,9 +43,9 @@ foreach ($Script in $Scripts) {
 }
 
 Write-Host "Available Modules:"
-$Scripts = Get-ChildItem -Path ./modules/*
-foreach ($Script in $Scripts) {
-  Write-Host " - ${Script##*\}"
+$Modules = Get-ChildItem -Path ./modules/*
+foreach ($Module in $Modules) {
+  Write-Host " - $($Module.Name)"
 }
 
 Write-Host
