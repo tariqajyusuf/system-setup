@@ -53,7 +53,7 @@ Write-Host "This script by default will install all modules, are there any modul
 $ExcludeModules = Read-Host
 
 Write-Host "Running module scripts..."
-$Scripts = Get-ChildItem -Path ./modules
+$Scripts = Get-ChildItem -Path ./modules*
 foreach ($Script in $Scripts) {
   if ($ExcludeModules -notcontains ${Script##*/}) {
     & $Script/windows.ps1
